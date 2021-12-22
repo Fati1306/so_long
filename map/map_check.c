@@ -6,7 +6,7 @@
 /*   By: fel-maac <fel-maac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/12 11:20:02 by fel-maac          #+#    #+#             */
-/*   Updated: 2021/12/20 10:10:34 by fel-maac         ###   ########.fr       */
+/*   Updated: 2021/12/22 11:18:55 by fel-maac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,27 @@ void	check_characters(char *dst)
 static int	check(char *dst, char c)
 {
 	int	i;
+	int	p_check;
 
-	i = 0;
-	while (dst[i])
+	i = -1;
+	p_check = 0;
+	if (c == 'P')
+	{
+		while (dst[++i])
+		{
+			if (dst[i] == c)
+				p_check++;
+		}
+		if (p_check == 1)
+			return (1);
+		else
+			error_exit("more than one player in map");
+	}
+	i = -1;
+	while (dst[++i])
 	{
 		if (dst[i] == c)
 			return (1);
-		i++;
 	}
 	return (0);
 }

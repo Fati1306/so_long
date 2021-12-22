@@ -6,7 +6,7 @@
 /*   By: fel-maac <fel-maac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/12 13:19:43 by fel-maac          #+#    #+#             */
-/*   Updated: 2021/12/16 14:09:03 by fel-maac         ###   ########.fr       */
+/*   Updated: 2021/12/22 11:19:36 by fel-maac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ static void	null_structs_pointers(t_data *frame)
 	frame->w = NULL;
 	frame->f = NULL;
 	frame->p = NULL;
-	frame->e = NULL;
 	frame->c = NULL;
 	frame->x = NULL;
 }
